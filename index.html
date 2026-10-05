@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>محصول فاخر — قهوة مختصة</title>
+<meta name="description" content="منيو محصول فاخر — قهوة مختصة. اطلب من طاولتك.">
+<meta property="og:title" content="محصول فاخر — قهوة مختصة">
+<meta property="og:description" content="منيو محصول فاخر الرقمي — اختر، أضف لطلبك، وأرسله وأنت على طاولتك.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="theme-color" content="#F7F6F2" id="metaTheme">
+<link rel="icon" href="assets/logo.png">
+<link rel="preload" as="image" href="assets/img/hero-roaster-square.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="assets/fonts.css?v=20260920-white">
+<link rel="stylesheet" href="assets/menu.css?v=20260922-smart-qr">
+<script src="assets/demo-ribbon.js"></script>
+</head>
+<body class="lock">
+
+<div id="progress"></div>
+
+<!-- ============ السبلاش ============ -->
+<div id="splash" aria-hidden="true">
+  <div class="sp-box">
+    <img class="sp-brand" src="assets/logo.png" alt="محصول فاخر">
+    <div class="sp-tag">قهوة مختصة</div>
+  </div>
+  <div class="sp-hint">المس الشاشة للدخول</div>
+</div>
+
+<!-- ============ زخارف ============ -->
+<svg class="stain a" viewBox="0 0 200 200" aria-hidden="true">
+  <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="7" stroke-dasharray="180 40 90 26"/>
+  <circle cx="100" cy="100" r="72" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="60 30 140 22"/>
+</svg>
+<svg class="stain b" viewBox="0 0 200 200" aria-hidden="true">
+  <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="6" stroke-dasharray="140 34 110 30"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="90 26 100 30"/>
+</svg>
+
+<!-- ============ الهيرو ============ -->
+<header id="hero">
+  <figure class="hero-photo hero-art an">
+    <img src="assets/img/hero-roaster-square.webp" alt="تحميص حبوب القهوة في محمصة محصول فاخر" fetchpriority="high" decoding="async">
+  </figure>
+
+  <h1 class="wordmark an" id="wm"><img src="assets/logo.png" alt="محصول فاخر" fetchpriority="high" decoding="async"></h1>
+  <p class="hero-tagline an">قهوة مختصة</p>
+
+  <div class="hero-cta an">
+    <button class="btn-ghost" id="heroOrder">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M4 6h2.2l2.1 9.4a2 2 0 0 0 2 1.6h6.6a2 2 0 0 0 2-1.5L20.5 9H7"/><circle cx="10.5" cy="20" r="1.1"/><circle cx="17.5" cy="20" r="1.1"/></svg>
+      <span id="heroOrderText">اطلب من الطاولة</span>
+    </button>
+  </div>
+
+  <div class="cue an">
+    <span>المنيو</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+</header>
+
+<!-- ============ الشريط ============ -->
+<nav id="nav">
+  <div class="nav-in">
+    <div class="pills" id="pills"><div class="glider" id="glider"></div></div>
+    <button class="nav-ico" id="searchBtn" aria-label="بحث" aria-expanded="false" aria-controls="searchRow">
+      <svg viewBox="0 0 24 24" class="ic"><circle cx="11" cy="11" r="6.6"/><path d="M15.8 15.8L21 21"/></svg>
+    </button>
+  </div>
+  <div class="search-row" id="searchRow" aria-hidden="true">
+    <svg viewBox="0 0 24 24" class="ic"><circle cx="11" cy="11" r="6.6"/><path d="M15.8 15.8L21 21"/></svg>
+    <input id="q" placeholder="دوّر على صنف…" autocomplete="off" spellcheck="false">
+    <button class="nav-ico sm" id="searchClose" aria-label="إغلاق البحث">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <!-- الكومبو -->
+  <section id="combos" class="rail-sec">
+    <div class="rail-head">
+      <h2>Luxury Crop offers</h2>
+      <p>اختيارات خاصة بسعر أفضل</p>
+    </div>
+    <div class="rail" id="comboRail"></div>
+  </section>
+
+  <div id="menu"></div>
+  <div id="qres" class="hide"></div>
+</main>
+
+<div class="end-band">
+  <img src="assets/img/items/beans.jpg" alt="" loading="lazy" decoding="async">
+</div>
+
+<footer>
+  <div class="fw"><img class="brand-light" src="assets/logo.png" alt="محصول فاخر"><img class="brand-dark" src="assets/logo-white.png" alt="محصول فاخر"></div>
+  <div class="ft">قهوة مختصة</div>
+  <div class="flinks" id="fLinks"></div>
+  <small>صُنع بحب لعشّاق القهوة المختصة</small>
+  <a class="studio-link" href="https://wa.me/201065736335" target="_blank" rel="noopener" aria-label="Built by ATHR — WhatsApp">Built by ATHR <span aria-hidden="true">↗</span></a>
+</footer>
+
+<button id="toTop" aria-label="العودة لأعلى">
+  <svg viewBox="0 0 24 24" class="ic"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg>
+</button>
+
+<!-- ============ شريط الطلب ============ -->
+<div id="bar">
+  <button class="bar-in" id="barBtn">
+    <span class="bar-n" id="barN">0</span>
+    <span class="bar-l">شوف طلبك</span>
+    <span class="bar-p"><span id="barT">0</span><span class="sar" role="img" aria-label="ريال سعودي"></span></span>
+  </button>
+</div>
+
+<!-- ============ الشيتات ============ -->
+<div class="sheet" id="shItem" aria-hidden="true"><div class="bk"></div><div class="pn" role="dialog" aria-modal="true"><div class="grab"></div><button class="sheet-close" type="button" aria-label="إغلاق">×</button><div class="pn-body" id="itemBody"></div></div></div>
+<div class="sheet" id="shCart" aria-hidden="true"><div class="bk"></div><div class="pn" role="dialog" aria-modal="true"><div class="grab"></div><button class="sheet-close" type="button" aria-label="إغلاق">×</button><div class="pn-body" id="cartBody"></div></div></div>
+<div class="sheet" id="shRev" aria-hidden="true"><div class="bk"></div><div class="pn" role="dialog" aria-modal="true"><div class="grab"></div><button class="sheet-close" type="button" aria-label="إغلاق">×</button><div class="pn-body" id="revBody"></div></div></div>
+
+<div id="toast" role="status" aria-live="polite"><span id="toastT"></span></div>
+
+<noscript><p style="text-align:center;padding:24px">فعّل الجافاسكربت لعرض المنيو.</p></noscript>
+
+<script defer src="data/menu.js?v=20260923-product-audit"></script>
+<script defer src="data/sales.js?v=20260921-combo-images"></script>
+<script defer src="assets/demo-backend.js"></script>
+<script defer src="assets/sys.js?v=20260921-approved-menu"></script>
+<script defer src="assets/menu.js?v=20260922-smart-qr"></script>
+</body>
+</html>
